@@ -7,9 +7,9 @@ class Category extends Controller{
 		$par = explode('-', $par);
 		//$data['listele'] = $this->kategori_model->liste($par['0']);
 		//$data['cat_id'] = $par['0'];
-		 $data['cat_id'] = subcat($par['0']).$par['0'];
+		 $cat_id = subcat($par['0']).$par['0'];
 
 		//echo $data['cat_id'];
-	 	Import::view(TEMA.'category_view',$data); 
+	 	view::cat_id($cat_id); 
 	}
 }

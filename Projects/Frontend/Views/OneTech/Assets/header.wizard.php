@@ -54,7 +54,7 @@
 							<div class="wishlist d-flex flex-row align-items-center justify-content-end">
 								<div class="wishlist_icon"><img src="images/heart.png" alt=""></div>
 								<div class="wishlist_content">
-									<div class="wishlist_text"><a href="/wishlist">İstek Listesi</a></div>
+									<div class="wishlist_text"><a href="/user/wishlist">İstek Listesi</a></div>
 									<div class="wishlist_count">0</div>
 								</div>
 							</div>
@@ -67,7 +67,7 @@
 										<div class="cart_count"><span>{{Cart::totalItems()}}</span></div>
 									</div>
 									<div class="cart_content">
-										<div class="cart_text"><a href="/sepet">Sepetim</a></div>
+										<div class="cart_text"><a href="/user/basket">Sepetim</a></div>
 										<div class="cart_price">{{price(Cart::totalPrices())}} TL</div>
 									</div>
 								</div>

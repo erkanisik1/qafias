@@ -6,6 +6,6 @@ use Import,Cart,Method;
 		if(Method::post()){
 			$this->Anasayfa->iletisim(Method::post());
 		}	
-			IMPORT::view(TEMA.'contact');
+			//IMPORT::view(TEMA.'contact');
 		}
 	}

@@ -1,21 +1,23 @@
 <?php namespace Project\Controllers;
-use Import,URL,Session,Method,DB; 
-
+use URL, Method, Session, DB; 
+	
 class User extends Controller{
+
 	
 	function main(){
-		$data['sip'] = $this->satis->siparislerim();
-			
-		Import::view(TEMA.'user/index',$data);
+		$sip = $this->satis->siparislerim();
+		view::sip($sip);
+		
 	}
 
 	function login(){
 		if(Method::post()) {$this->user_model->login(Method::post());}
-		Import::view(TEMA.'user/login');
+	
 	}//login function
 
 	function register(){
-		Import::view(TEMA.'user/user_register_view');
+		if(Method::post()) {$this->user_model->register(Method::post());}
+		
 	}//register function
 
 	function logout(){
@@ -31,9 +33,9 @@ class User extends Controller{
 		    'status' => '1'
 		]);
 		if(DB::affectedRows()){
-			Import::view(TEMA.'finis');
+			view::get('/user/finis');
 		}else{
-			Import::view(TEMA.'noaktifkodu');
+			view::get('/user/noaktifkodu');
 		}
 			
 	}

@@ -1,8 +1,7 @@
 
-<?php Import::view(TEMA.'header'); ?>
 
- <link rel="stylesheet" type="text/css" href="/<?php echo THEMES_DIR;?>OneTech/styles/contact_styles.css">
- <link rel="stylesheet" type="text/css" href="/<?php echo THEMES_DIR;?>OneTech/styles/contact_responsive.css">
+ <link rel="stylesheet" type="text/css" href="styles/contact_styles.css">
+ <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 
 <br>	
 		
@@ -39,9 +38,4 @@
 			<div class="panel"></div>
 		</div>
 
-		
-
-
-
-
-<?php import::view(TEMA.'footer'); ?>
+	

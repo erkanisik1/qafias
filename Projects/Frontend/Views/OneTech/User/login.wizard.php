@@ -1,5 +1,3 @@
-<?php import::view(TEMA.'header'); ?>
-
 <div class="single_post">
 		<div class="container">
 			<div class="row">
@@ -37,6 +35,3 @@
 			</div>
 		</div>
 	</div>
-
-
-<?php import::view(TEMA.'footer'); ?>

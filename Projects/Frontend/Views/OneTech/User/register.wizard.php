@@ -1,4 +1,3 @@
-<?php import::view(TEMA.'header'); ?>
 <div class="single_post">
 				<div class="col-lg-4 offset-lg-2 mx-auto">
 					<div class="single_post_title" style="color:#0E8CE4;">ÜYE OL</div>
@@ -31,7 +30,7 @@
 
 								<div class="form-group">
 									<select name="gender" id="gender" class="form-control" required style="margin-left: 0px;">
-										<option value="">Seçiniz...</option>
+										<option value="">Cinsiyetiniz...</option>
 										<option value="Erkek">Erkek</option>
 										<option value="Kadın">Kadın</option>									
 									</select>
@@ -44,9 +43,9 @@
 									<label>Doğum Tarihiniz</label><br>
 									<select name="day" class="form-control" required>
 										<option value="">GÜN</option>
-										<?php for ($x = 1; $x <= 31; $x++) { ?>
-											<option value="<?php echo $x; ?>"><?php echo $x; ?></option>
-										<?php } ?>
+										@for ($x = 1; $x <= 31; $x++) 
+											<option value="{[ echo $x; ]}">{[ echo $x; ]}</option>
+										@endfor
 									</select>
 								</div>
 								&nbsp
@@ -54,9 +53,9 @@
 									<label>&nbsp</label>
 									<select name="month" class="form-control" required>
 										<option value="">AY</option>
-										<?php for ($x = 1; $x <= 12; $x++) { ?>
-											<option value="<?php echo $x; ?>"><?php echo $x; ?></option>
-										<?php } ?>
+										@for ($x = 1; $x <= 12; $x++)
+											<option value="{[ echo $x; ]}">{[ echo $x; ]}</option>
+										@endfor
 									</select>
 								</div>
 								&nbsp
@@ -64,19 +63,18 @@
 									<label>&nbsp</label>
 									<select name="year" class="form-control" required>
 										<option value="">YIL</option>
-										<?php 
-											$yil = date('Y')-18;
+										{[ $yil = date('Y')-18; ]}
 
-											for ($x = $yil; $x >='1920'; $x--) { ?>
-											<option value="<?php echo $x; ?>"><?php echo $x; ?></option>
-										<?php } ?>
+										@for ($x = $yil; $x >='1920'; $x--)
+											<option value="{[ echo $x; ]}">{[ echo $x; ]}</option>
+										@endfor
 									</select>
 								</div></div>
 
 								<div class="form-group" style="margin-left: 20px;">
 									<div class="form-check">
+									  <label class="form-check-label" >
 									  <input class="form-check-input" type="checkbox" name="confirmation" value="1" id="confirmation" required>
-									  <label class="form-check-label" for="onay">
 									    Üyelik Sözleşme şartlarını okudum ve kabul ediyorum.
 									  </label>
 									</div>
@@ -87,11 +85,5 @@
 							</form>
 						</div>
 				</div>
-	
-
-
 		</div>
 	
-
-
-<?php import::view(TEMA.'footer'); ?>

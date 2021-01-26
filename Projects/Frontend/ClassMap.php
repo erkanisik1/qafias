@@ -2,10 +2,6 @@
 #----------------------------------------------------------------------
 # This file automatically created and updated
 #----------------------------------------------------------------------
-$classMap['classes']['project\controllers\home'] = 'Projects/Frontend/Controllers/Home.php';
-$classMap['classes']['project\controllers\initialize'] = 'Projects/Frontend/Controllers/Initialize.php';
-$classMap['namespaces']['project\controllers\home'] = 'home';
-$classMap['namespaces']['project\controllers\initialize'] = 'initialize';
 $classMap['classes']['project\controllers\ajax'] = 'Projects/Frontend/Controllers/Ajax.php';
 $classMap['classes']['project\controllers\basket'] = 'Projects/Frontend/Controllers/Basket.php';
 $classMap['classes']['project\controllers\buy'] = 'Projects/Frontend/Controllers/Buy.php';
@@ -13,6 +9,8 @@ $classMap['classes']['project\controllers\category'] = 'Projects/Frontend/Contro
 $classMap['classes']['project\controllers\contact'] = 'Projects/Frontend/Controllers/Contact.php';
 $classMap['classes']['project\controllers\content'] = 'Projects/Frontend/Controllers/Content.php';
 $classMap['classes']['project\controllers\detay'] = 'Projects/Frontend/Controllers/Detay.php';
+$classMap['classes']['project\controllers\home'] = 'Projects/Frontend/Controllers/Home.php';
+$classMap['classes']['project\controllersproject\controllers\initialize'] = 'Projects/Frontend/Controllers/Initialize.php';
 $classMap['classes']['project\controllers\login'] = 'Projects/Frontend/Controllers/Login.php';
 $classMap['classes']['project\controllers\maintance'] = 'Projects/Frontend/Controllers/Maintance.php';
 $classMap['classes']['project\controllers\member'] = 'Projects/Frontend/Controllers/Member.php';
@@ -31,6 +29,8 @@ $classMap['namespaces']['project\controllers\category'] = 'category';
 $classMap['namespaces']['project\controllers\contact'] = 'contact';
 $classMap['namespaces']['project\controllers\content'] = 'content';
 $classMap['namespaces']['project\controllers\detay'] = 'detay';
+$classMap['namespaces']['project\controllers\home'] = 'home';
+$classMap['namespaces']['project\controllersproject\controllers\initialize'] = 'initialize';
 $classMap['namespaces']['project\controllers\login'] = 'login';
 $classMap['namespaces']['project\controllers\maintance'] = 'maintance';
 $classMap['namespaces']['project\controllers\member'] = 'member';
@@ -42,3 +42,12 @@ $classMap['namespaces']['project\controllers\store'] = 'store';
 $classMap['namespaces']['project\controllers\store_register'] = 'store_register';
 $classMap['namespaces']['project\controllers\user'] = 'user';
 $classMap['namespaces']['project\controllers\create'] = 'create';
+$classMap['classes']['anasayfa'] = 'Projects/Frontend/Models/Anasayfa.php';
+$classMap['classes']['login_model'] = 'Projects/Frontend/Models/Login_model.php';
+$classMap['classes']['satis'] = 'Projects/Frontend/Models/Satis.php';
+$classMap['classes']['store_model'] = 'Projects/Frontend/Models/Store_model.php';
+$classMap['classes']['user_model'] = 'Projects/Frontend/Models/User_model.php';
+$classMap['classes']['yonetim'] = 'Projects/Frontend/Models/Yonetim.php';
+$classMap['classes']['adres'] = 'Projects/Frontend/Models/adres.php';
+$classMap['classes']['kategori_model'] = 'Projects/Frontend/Models/kategori_model.php';
+$classMap['classes']['uyelik'] = 'Projects/Frontend/Models/uyelik.php';
