@@ -22,7 +22,8 @@
         'default' => ZN\Base::project('Frontend'),
         'others'  =>
         [
-            'backend' => 'Backend'
+            'panel' => 'Panel',
+            'store' => 'Store'
         ]
     ],
 

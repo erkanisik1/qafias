@@ -47,12 +47,16 @@
 					<div class="footer_column">
 						<div class="footer_title">İlkelerimiz</div>
 						<ul class="footer_list">
+							@foreach (pageLink() as $key )
+								<li><a href="/page/{{$key->title_seo}}">{{$key->title}}</a></li>
+							@endforeach
+							<!-- 
 							<li><a href="/page">Kullanım ve Üyelik Şartları</a></li>
 							<li><a href="/page">Gizlilik Politikası</a></li>
 							<li><a href="/page">Mesafeli̇ Satiş Sözleşmesi̇</a></li>
 							<li><a href="/page">Geri Ödeme Politikası</a></li>
 							<li><a href="/page">Ödeme Sistemi</a></li>
-							
+							 -->
 						</ul>
 					</div>
 				</div>

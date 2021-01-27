@@ -4,7 +4,7 @@ function main_products($limit = null){return DB::select('id','title','price','ti
 
   function product_detail($id){return DB::where('id',$id)->get('products')->row();}
 
-  function store_products(){return DB::orderBy('id','desc')->where('store_id',session::select('storeid'))->get('products')->result();}
+  function store_products(){return DB::orderBy('id','desc')->where('store_id',session::select('STOREID'))->get('products')->result();}
 
   function category_list_products($cat_id){
   

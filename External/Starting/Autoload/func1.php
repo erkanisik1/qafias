@@ -99,6 +99,10 @@ function category($id){
     return DB::where('title_seo',$l['0'])->get('page')->row();
   }
 
+    function pageLink(){
+    
+    return DB::select('id', 'title', 'title_seo')->get('page')->result();
+  }
 
 
 function seo($s) {
