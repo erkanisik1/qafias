@@ -1,6 +1,6 @@
 
 	<div class="banner">
-		<div class="banner_background" style="background-image:url(/{[ echo THEMES_DIR;]}OneTech/images/banner_background.jpg)"></div>
+		<div class="banner_background" style="background-image:url('/images/banner_background.jpg')"></div>
 		<div class="container fill_height">
 			<div class="row fill_height">
 				<div class="banner_product_image"><img src="/upload/magaza_id-4/elbise-01/294055ea-_jim6448.jpg" alt="" height="421"></div>

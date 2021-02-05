@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use Import,Cart; namespace Project\Controllers;
+use Import,Cart;
 
 class Initialize extends Controller
 {
@@ -8,14 +8,18 @@ class Initialize extends Controller
      * It enters the circuit before all controllers. 
      * You can change this setting in Config/Starting.php file.
      */
-    public function main()
-    {
+
+   
+    public function main(){
         # The theme is activated.
         # Location: Resources/Themes/Default/
-        Theme::active('OneTech');
-        
-        # The current settings are being configured.
-        Masterpage::headPage('Assets/head')
+      
+       if (CURRENT_CONTROLLER == 'Maintance') {
+           Theme::active('Default');
+        }else{
+            Theme::active('OneTech');
+            Masterpage::headPage('Assets/head')
                   ->bodyPage('Assets/body');
+        }
     }
 }

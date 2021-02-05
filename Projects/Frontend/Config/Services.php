@@ -28,19 +28,19 @@
     | general: General e-mail settings.
     |
     */
-
+// hhbaqgdpavpajigv
     'email' =>
     [
         'driver' => 'smtp',
         'smtp'   =>
         [
-            'host'      => '',
-            'user'      => '',
-            'password'  => '',
+            'host'      => 'smtp.yandex.com',
+            'user'      => 'usermanage@qafias.com',
+            'password'  => 'akwmhtoxqwgridkr',
             'port'      => 587,
             'keepAlive' => false,
             'timeout'   => 10,
-            'encode'    => '',  # empty, tls, ssl
+            'encode'    => 'tls',  # empty, tls, ssl
             'dsn'       => false,
             'auth'      => true
         ],
@@ -55,8 +55,8 @@
         ],
         'general' =>
         [
-            'senderMail'    => '',                  # Default Sender E-mail Address.
-            'senderName'    => '',                  # Default Sender Name.
+            'senderMail'    => 'usermanage@qafias.com',                  # Default Sender E-mail Address.
+            'senderName'    => 'Qafia\'s Müşteri Hizmetleri',                  # Default Sender Name.
             'priority'      => 3,                   # 1, 2, 3, 4, 5
             'charset'       => 'UTF-8',             # Charset Type
             'contentType'   => 'html',              # plain, html

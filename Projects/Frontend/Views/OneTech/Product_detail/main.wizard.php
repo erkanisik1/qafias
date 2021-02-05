@@ -45,13 +45,14 @@
 
 								<div class="product_price">{[ echo product_detail($id)->price; ]} TL</div>
 								<div class="button_container">
-									@if (Session::select('userid')) 
+									@if (Session::select('USERID')) 
 										<button type="button"  class="button cart_button" id="basket" data-id="{[ echo $id; ]}">Satın Al</button>
 									@else
 											{[Cookie::insert('url', '/product_detail/'.$id.'-'.product_detail($id)->title_seo);]}
 
 									
-										<a href="/user/login"><button type="button"  class="button cart_button">Satın Al</button></a>
+										<a href="/user/login">
+											<button type="button"  class="button cart_button">Satın Al</button></a>
 									@endif
 									
 									<div class="product_fav"><i class="fas fa-heart"></i></div>

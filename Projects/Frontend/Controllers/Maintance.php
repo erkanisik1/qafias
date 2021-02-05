@@ -1,11 +1,11 @@
 <?php namespace Project\Controllers;
-
+use Import; 
 class Maintance extends Controller{
 
-	function main(){ 
-	    echo 'Bakımdayız';
-	    //Import::view('maintance');
-	}
-	    
 	
+
+	function main(){ 
+		
+	    Import::view('maintance');
+	}
 }

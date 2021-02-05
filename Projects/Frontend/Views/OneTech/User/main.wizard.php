@@ -1,14 +1,16 @@
 {[ $orders = 0;]}
+
 	<div class="cart_section">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-10 offset-lg-1">
+				@view('User/sidebar')
+				<div class="col-lg-9">
 					<div class="cart_container">
 						@if($sip)
 						<div class="cart_title">Siparişlerim</div>
 						<div class="cart_items">
 							<ul class="cart_list">
-								{[ foreach ($sip as $key ) { ]}
+								@foreach ($sip as $key ) 
 								<li class="cart_item clearfix">
 									<div class="cart_item_image"><img src="{[ echo mainimage($key->product_id); ]}" alt="" width="90"></div>
 									<div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
@@ -35,7 +37,8 @@
 										</div>
 									</div>
 								</li>
-							{[  $orders = $topla+$orders; } ]}
+							{[  $orders = $topla+$orders;  ]}
+							@endforeach
 							</ul>
 						</div>
 						
@@ -48,14 +51,13 @@
 						</div>
 
 						<div class="cart_buttons">
-							<a href="/"><button type="button" class="button cart_button_clear">ALIŞVERİŞE DEVAM</button></a>
+							<a href="{{URL::base()}}"><button type="button" class="button cart_button_clear">ALIŞVERİŞE DEVAM</button></a>
 							<a href="/basket"><button type="button" class="button cart_button_checkout">KASAYA GİT</button></a>
 						</div>
 						@else
 							<div class="card_title"><h2>Sepetiniz Boş</h2><br>
-Alışverişinize sizin için önerdiğimiz ürünlere göz atarak başlayabilirsiniz.
-
-</div>
+								Alışverişinize sizin için önerdiğimiz ürünlere göz atarak başlayabilirsiniz.
+							</div>
 						@endif
 					</div>
 				</div>

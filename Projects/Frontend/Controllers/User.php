@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use URL, Method, Session, DB; 
+use URL, Method, Session, DB, URI; 
 	
 class User extends Controller{
 
@@ -16,27 +16,18 @@ class User extends Controller{
 	}//login function
 
 	function register(){
-		if(Method::post()) {$this->user_model->register(Method::post());}
-		
+		if(Method::post()) {$this->user_model->register(Method::post());}		
 	}//register function
 
 	function logout(){
 		Session::deleteAll();
-			redirect('/');
+		redirect(URL::base());
 	}
 
 
-	function aktivizasyon($data){
-
-		DB::where('mailOnay', $data)->update('user',[
-		    'mailOnay'    => '',
-		    'status' => '1'
-		]);
-		if(DB::affectedRows()){
-			view::get('/user/finis');
-		}else{
-			view::get('/user/noaktifkodu');
-		}
-			
+	function aktivizasyon(){
+		
+		View::back($this->user_model->activation(URI::get('aktivizasyon')));
 	}
+
 }// user class end

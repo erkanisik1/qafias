@@ -64,7 +64,7 @@
     |
     */
     
-    'key' => ZN\In::secretProjectKey('Your secret key'),
+    'key' => ZN\In::secretProjectKey('jJQvoyRu5p&pbhSj0vevGv9M=rij_jYapckmagsnZmJ3q'),
 
     /*
     |--------------------------------------------------------------------------

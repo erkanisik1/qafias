@@ -13,10 +13,7 @@ use DB,Method,Email,Session,Cart;
 			echo $a;
 		}// ilcegetir fonksiyonu
 
-
-		function uyekayit(){			
-			$this->login_model->userCreate(Method::post());
-		}// yeni Üye Kaydı
+		function uyekayit(){$this->login_model->userCreate(Method::post());}// yeni Üye Kaydı
 
 
 		function hemenal(){
@@ -29,6 +26,7 @@ use DB,Method,Email,Session,Cart;
 		}
 
 		function basketadd(){
+			/*
 			$data = explode('/', method::post('veri'));
 			$rnd = Session::select('userid').$data['2'];
 			cart::insertItem([
@@ -38,6 +36,7 @@ use DB,Method,Email,Session,Cart;
 				'serial-number' => $rnd,
 				'userid'		=> Session::select('userid'),
 			]);
+			*/
 			echo 'başarılı';
 		}
 
@@ -46,6 +45,7 @@ use DB,Method,Email,Session,Cart;
 			$isim = method::post('name').' '.method::post('surname');
 			$rast = md5(date('dmyhsi'));
 			$birthdate = method::post('year').'-'.method::post('month').'-'.method::post('day');
+			
 			DB::insert('user',[
 				'name' 		=> $isim,
 			    'email' 	=> method::post('email'),

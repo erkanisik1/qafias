@@ -2,11 +2,14 @@
 use Import,Cart; 
 class Home extends Controller{
 
+
 	function main(){ 
+
 		//$data['vitrin'] = $this->anasayfa->vitrin();	
 		//$data['page'] = 'home';
 		//echo 'frnrmnr';
 	    //Import::view(TEMA.'index',$data);
+	 
 	}
 
 

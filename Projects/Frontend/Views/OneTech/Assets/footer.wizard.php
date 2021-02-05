@@ -116,11 +116,11 @@
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="plugins/slick-1.8.0/slick.js"></script>
 <script src="plugins/easing/easing.js"></script>
-<script src="js/custom.js"></script>
+<script src="js/my.js"></script>
 <script src="js/product_custom.js"></script>
 <script src="js/jquery-confirm.js"></script>
 <script src="js/jquery.validate.min.js"></script>
-<script src="js/my.js"></script>
+<script src="js/custom.js"></script>
 </body>
 
 </html>
