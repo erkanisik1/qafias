@@ -9,8 +9,8 @@
     |
     */
 
-    //'openController' => 'Home',
-    'openController' => 'Maintance',
+    'openController' => 'Home',
+    //'openController' => 'Maintance',
 
     /*
     |--------------------------------------------------------------------------

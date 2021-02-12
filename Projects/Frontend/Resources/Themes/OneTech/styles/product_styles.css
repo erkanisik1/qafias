@@ -45,7 +45,7 @@ body
 	font-family: 'Rubik', sans-serif;
 	font-size: 14px;
 	font-weight: 400;
-	background: #FFFFFF;
+	background: #eee;
 	color: #000000;
 }
 div
@@ -288,6 +288,7 @@ section
 	position: relative;
 	width: 100%;
 	z-index: 10;
+	background: #fff
 }
 
 /*********************************
@@ -1321,7 +1322,7 @@ select option
 }
 .product_description
 {
-	padding-left: 50px;
+	/*padding-left: 50px;*/
 }
 .product_category
 {
@@ -1368,6 +1369,7 @@ select option
 	padding-left: 25px;
 	float: left;
 	margin-right: 30px;
+	background: #fff;
 }
 .product_quantity span
 {
@@ -2113,4 +2115,14 @@ select option
 .logos_list li:last-child
 {
 	margin-right: 0px;
+}
+
+/* Sonradan eklendi*/
+
+.xzoom-gallery {
+    margin-top: 10px
+}
+
+.xzoom {
+    margin-top: 40px
 }

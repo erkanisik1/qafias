@@ -23,7 +23,7 @@
         'others'  =>
         [
             'panel' => 'Panel',
-            'store' => 'Store'
+            'store' => 'Store',
         ]
     ],
 

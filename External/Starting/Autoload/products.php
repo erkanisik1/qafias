@@ -22,8 +22,8 @@ function main_products($limit = null){return DB::select('id','title','price','ti
 
   function brands(){return DB::get('brands')->result();}
 
-  function product_images($arama){
-    return DB::where('product_id', $arama)->get('products_img')->result();
+  function product_images($id){
+    return DB::where('product_id', $id)->get('products_img')->result();
   }
 
   function detail_image_list($par){
@@ -45,4 +45,16 @@ function main_products($limit = null){return DB::select('id','title','price','ti
   }
 function product_row($id){
   return DB::where('id',$id)->get('products')->row();
+}
+
+function order(){
+  return DB::basket()->result();
+}
+
+function productName($id){
+  return DB::where('id', $id)->select('title')->products()->value();
+}
+
+function orderCount(){
+  return DB::basket()->totalRows(true);
 }

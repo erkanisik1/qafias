@@ -1,4 +1,4 @@
-{[ import::view('header'); ]}
+
 		<div class="widget-box">
 	        <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
 	          <h5>Sipariş Listesi</h5>
@@ -12,25 +12,30 @@
                   <th width="60">S.Tarih</th>
                   <th>Ürün Adı</th>
                   <th>Müşteri Adı</th>
-                  <th width="80">İşlemler</th>
+                  <th width="250">İşlemler</th>
                 </tr>
               </thead>
               <tbody>
 
-				{[ $a=0; foreach ($siparis as $key ) { $a = $a + 1;]}
+				{[ $a=0; ]} 
+        @foreach (order() as $key ) 
+        {[ $a = $a + 1;]}
                 <tr>
-                	<td>{[ echo $a; ]} </td>
-                	<td>{[ echo $key->urunID ]}</td>
-                  <td>{[ echo Myfunc::tcevir($key->createDate) ]}</td>
-                  <td>{[ echo Mgzy::urun_adi($key->urunID); ]}</td>
-                  <td>{[ echo Mgzy::musteri_adi($key->musteriID); ]}</td>
+                	<td>{{$a}} </td>
+                	<td>{{$key->id}}</td>
+                  <td>{{tcevir($key->createDate)}}</td>
+                  <td>{{productName($key->product_id)}}</td>
+                  <td>{{userName($key->user_id)}}</td>
                 
-                  <td class="islemler" style="text-align: center;">
-                    <a href="{[ echo baseUrl(); ]}magazayonetim/urunler/duzenle/{[ echo $key->urunID; ]}"><i class="icon-pencil"></i></a>
-                    <a href="{[ echo baseUrl(); ]}magazayonetim/urunler/sil/{[ echo $key->urunID; ]}" onclick="return confirm('Bu kaydı silmek istediğinize eminmisiniz?');"><i class="icon-remove"></i></a>
+                  <td class="" style="text-align: center;">
+                    <a href="/store/orders/detay/{[ echo $key->id; ]}"><button class="btn btn-primary">Sipariş Detayı</button></a>
+                    <a href="/store/orders/edit/{[ echo $key->id; ]}">
+                      <button class="btn btn-warning"><i class="icon-pencil"></i></button></a>
+                    <a href="/store/orders/delete/{[ echo $key->id; ]}" onclick="return confirm('Bu kaydı silmek istediğinize eminmisiniz?');">
+                      <button class="btn btn-danger"><i class="icon-remove"></i></button></a>
                   </td>
                 </tr>
-               {[ } ]}
+               @endforeach
               
 
               </tbody>
@@ -38,5 +43,3 @@
             </table>
         	</div>
         </div>
-
-{[ import::view('footer'); ]}

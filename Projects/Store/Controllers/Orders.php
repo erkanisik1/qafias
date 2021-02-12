@@ -4,8 +4,8 @@ class Orders extends Controller
 {	
     
     public function main(){	       
-        $data['siparis'] = $this->urun->sipliste();
-        Import::view('siparisler',$data);
+        //$data['siparis'] = $this->urun->sipliste();
+        //Import::view('siparisler',$data);
     }	
 	
    

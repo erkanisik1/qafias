@@ -1,9 +1,34 @@
 <?php namespace Project\Controllers;
-use Import,Cart; 
+use Import,Cart,URI; 
 
 	class Product extends Controller{
 		
 		function main(){
-			echo 'şboıy';
+			
+		}
+
+		function detail(){
+			//define('product_id', $id);
+			$id 		= URI::get('detail');
+			$category 	= products_category(product_detail($id)->category)->name;
+			$title 		= product_detail($id)->title;
+			$content 	= product_detail($id)->content;
+			$cargo 		= product_detail($id)->cargo_payment == 0?'Ücretsiz Kargo':'Alıcı Kargoyu Kapıda Öder';
+			$price		= product_detail($id)->price;
+
+
+			view::category($category)
+				->id(URI::get('detail'))
+				->title($title)
+				->content($content)
+				->cargo($cargo)
+				->price($price);
+		}
+
+		function category(){
+			$id = explode('-', URI::get('category'))['0'];
+
+			$cat_id = subcat($id).$id;
+			view::cat_id($cat_id); 
 		}
 	}

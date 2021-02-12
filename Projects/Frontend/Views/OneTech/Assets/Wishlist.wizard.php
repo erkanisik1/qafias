@@ -1,4 +1,3 @@
-<!-- Wishlist -->
 <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
 	<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
 		<div class="wishlist d-flex flex-row align-items-center justify-content-end">
@@ -23,4 +22,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div>	
