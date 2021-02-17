@@ -63,3 +63,5 @@ $classMap['namespaces']['mailjet\resources'] = 'resources';
 $classMap['namespaces']['mailjet\response'] = 'response';
 $classMap['classes']['project\controllers\home1'] = 'Projects/Frontend/Controllers/Home1.php';
 $classMap['namespaces']['project\controllers\home1'] = 'home1';
+$classMap['classes']['project\controllers\search'] = 'Projects/Frontend/Controllers/Search.php';
+$classMap['namespaces']['project\controllers\search'] = 'search';

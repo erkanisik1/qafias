@@ -6,8 +6,11 @@
 						<div class="page_menu_content">
 							
 							<div class="page_menu_search">
-								<form action="#">
+								<form action="/search" method="post">
 									<input type="search" name="search" required="required" class="page_menu_search_input" placeholder="Ürün Ara...">
+
+					<button type="submit" class="header_search_button " value="Submit" style="background: #70C2FB ; border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;"><i class="fas fa-search"></i></button>
 								</form>
 							</div>
 

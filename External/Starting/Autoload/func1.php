@@ -23,6 +23,10 @@
 		
 	}
 
+  function productNew($date){
+    return Date::diffDayUp($date, Date::now());
+  }
+
   function settingRow($id){
     return DB::where('id',$id)->get('settings')->row();
   }

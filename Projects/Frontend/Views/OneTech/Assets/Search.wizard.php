@@ -2,19 +2,10 @@
 	<div class="header_search">
 		<div class="header_search_content">
 			<div class="header_search_form_container">
-				<form action="#" class="header_search_form clearfix">
+				<form action="/search" class="header_search_form clearfix" method="post">
 					<input type="search" name="search" required="required" class="header_search_input" placeholder="Ürün Ara...">
-					<div class="custom_dropdown clc">
-						<div class="custom_dropdown_list">
-							<span class="custom_dropdown_placeholder"></span>
-
-							<ul class="custom_list clc">
-
-							</ul>
-						</div>
-					</div>
-
-					<button type="submit" class="header_search_button trans_300" value="Submit"><img src="images/search.png" alt=""></button>
+				
+					<button type="submit" class="header_search_button trans_300"><img src="images/search.png" alt=""></button>
 				</form>
 			</div>
 		</div>

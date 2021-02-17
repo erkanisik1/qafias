@@ -15,6 +15,7 @@ use Import,Cart,URI;
 			$content 	= product_detail($id)->content;
 			$cargo 		= product_detail($id)->cargo_payment == 0?'Ücretsiz Kargo':'Alıcı Kargoyu Kapıda Öder';
 			$price		= product_detail($id)->price;
+			$cat_id 	= product_detail($id)->category;
 
 
 			view::category($category)
@@ -22,7 +23,8 @@ use Import,Cart,URI;
 				->title($title)
 				->content($content)
 				->cargo($cargo)
-				->price($price);
+				->price($price)
+				->catId($cat_id);
 		}
 
 		function category(){

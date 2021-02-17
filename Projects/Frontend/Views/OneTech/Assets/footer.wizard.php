@@ -1,7 +1,7 @@
 
 	<!-- Footer -->
 
-	<footer class="footer" style="border-top: 1px solid #ccc">
+	<footer class="footer bg-white mt-2" style="border-top: 1px solid #ccc">
 		<div class="container">
 			<div class="row">
 
@@ -119,19 +119,17 @@
 
 
 @if (CURRENT_CONTROLLER == 'Home')
-<script src="plugins/s5	lick-1.8.0/slick.js"></script>
-<script src="js/custom.js"></script>
-	
-@elseif (CURRENT_CONTROLLER == 'Category')	
-<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
-<script src="plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/shop_custom.js"></script>
-
+	<script src="plugins/s5	lick-1.8.0/slick.js"></script>
+	<script src="js/custom.js"></script>	
+@elseif (CURRENT_CONTROLLER == 'Category')
+	<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+	<script src="plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+	<script src="plugins/parallax-js-master/parallax.min.js"></script>
+	<script src="js/shop_custom.js"></script>
 @elseif (CURRENT_CONTROLLER == 'Product')	
-<script src="js/product_custom.js"></script>
-<script src="js/xzoom.min.js"></script>
-<script src="js/zoom.js"></script>
+	<script src="js/product_custom.js"></script>
+	<script src="js/xzoom.min.js"></script>
+	<script src="js/zoom.js"></script>
 @endif
 
 <script src="js/my.js"></script>
