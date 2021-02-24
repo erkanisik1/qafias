@@ -613,8 +613,20 @@
 {
 	.product_item
 	{
-		width: 50%;
+		width: 87%;
+		margin-left: 25px !important;
+		w-idth: 50%;
 	}
+
+	.btn-primary {
+	     color: #fff;
+	     background-color: #3167eb;
+	     border-color: #3167eb;
+	     display: block !important;
+	     
+ 	}
+
+ 	
 }
 
 /************

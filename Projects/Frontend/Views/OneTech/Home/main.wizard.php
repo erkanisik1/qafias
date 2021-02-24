@@ -4,11 +4,11 @@
 
 <div class="container">
     <div class="row">
-		@foreach (main_products('9') as $key)
-        	<div class="col-md-4">
+		@foreach (main_products('100') as $key)
+        	<div class="col-md-3 hw">
             <figure class="card card-product-grid card-lg"> 
             	<a href="/product/detail/{{$key->id}}/{{$key->title_seo}}" class="img-wrap" data-abc="true">
-            		<img src="/{{mainimage($key->id)}}">
+            		<img src="/{{mainimage($key->id)}}" class="img-fluid">
             	</a>
                 <figcaption class="info-wrap">
                     <div class="row">
@@ -17,9 +17,11 @@
                     </div>
                 </figcaption>
                 <div class="bottom-wrap"> 
-                	<a href="/product/detail/{{$key->id}}/{{$key->title_seo}}" class="btn btn-primary float-right"> Satın Al </a>
-                    <div class="price-wrap" style="width: 50%"> <span class="price h5">{{$key->price}} TL</span>  </div>
+                	<div class="price-wrap mb-2" > <span class="price h5">{{$key->price}} TL</span>  </div>
                 </div>
+                    <div class="bottom-wrap-btn text-center " style="border-top: 1px solid #e4e4e4;padding: 10px; font-size: 1.3rem" >
+                    	<a href="/product/detail/{{$key->id}}/{{$key->title_seo}}"> <i class="fas fa-check-circle"></i> İncele </a>
+                    </div>
             </figure>
         	</div>
         @endforeach

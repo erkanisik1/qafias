@@ -19,7 +19,7 @@ $(function(){
         });
     });
 
-
+/*
 $.validator.setDefaults({
     
     submitHandler: function() {
@@ -30,12 +30,12 @@ $.validator.setDefaults({
             success: function(data) {
                 alert(data);
                 if (data = 1) {
-                 /*   
-                $.alert({
-                    title: 'Üyelik Başvurusu',
-                    content: 'Üyeliğinizi aktif edebilmek için email adresinize bir email gönderdik lütfen emalinizi kontrol ediniz...  ',
-                });
-                */
+                    
+                //$.alert({
+                    //title: 'Üyelik Başvurusu',
+                    //content: 'Üyeliğinizi aktif edebilmek için email adresinize bir email gönderdik lütfen emalinizi kontrol ediniz...  ',
+                //});
+                
               
             }else{
                 alert(data);
@@ -47,6 +47,6 @@ $.validator.setDefaults({
         });
     }
 });
-
+*/
 
 });

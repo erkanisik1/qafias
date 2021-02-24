@@ -1,3 +1,4 @@
+
 <div class="super_container">
 	<header class="header">
 
@@ -18,23 +19,17 @@
 
 					<!-- Search -->
 					@view('Assets/Search')
-				
 
 					<!-- Wishlist -->
 					@view('Assets/Wishlist')
-						
-
 				</div>
 			</div>
 		</div>
 		
 		<!-- Main Navigation -->
+@view('Assets/MainNavigation')
 
-		@view('Assets/MainNavigation')
-
-		
-		
-		<!-- Menu -->
+	<!-- Menu -->
 		@view('Assets/pageMenu')
 
 	</header>

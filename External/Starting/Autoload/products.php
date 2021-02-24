@@ -1,6 +1,6 @@
 <?php 
 
-function main_products($limit = null){return DB::select('id','title','price','title_seo')->orderBy('id','DESC')->limit($limit)->get('products')->result();}
+function main_products($limit = null){return DB::select('id','title','price','title_seo')->orderByRandom()->limit($limit)->get('products')->result();}
 
   function product_detail($id){return DB::where('id',$id)->get('products')->row();}
 

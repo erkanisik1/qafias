@@ -119,7 +119,7 @@
 
 
 @if (CURRENT_CONTROLLER == 'Home')
-	<script src="plugins/s5	lick-1.8.0/slick.js"></script>
+	<script src="plugins/slick-1.8.0/slick.js"></script>
 	<script src="js/custom.js"></script>	
 @elseif (CURRENT_CONTROLLER == 'Category')
 	<script src="plugins/Isotope/isotope.pkgd.min.js"></script>

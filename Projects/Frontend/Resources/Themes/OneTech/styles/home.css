@@ -112,6 +112,8 @@
      border-top: 1px solid #e4e4e4
  }
 
+
+
  .btn {
      display: inline-block;
      font-weight: 600;
@@ -133,9 +135,19 @@
  .btn-primary {
      color: #fff;
      background-color: #3167eb;
-     border-color: #3167eb
+     border-color: #3167eb;
+     
  }
 
  .fa {
      color: #FF5722
+ }
+
+ .card-product-grid:hover .bottom-wrap-btn{
+     background: #0056b3;
+     
+ }
+
+ .card-product-grid:hover .bottom-wrap-btn a{
+     color: #fff;
  }

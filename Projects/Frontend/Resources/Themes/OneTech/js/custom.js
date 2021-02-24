@@ -40,9 +40,7 @@ $(document).ready(function()
 
 	var menuActive = false;
 	var header = $('.header');
-
 	setHeader();
-
 	initCustomDropdown();
 	initPageMenu();
 	initDealsSlider();
