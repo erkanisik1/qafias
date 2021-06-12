@@ -26,7 +26,7 @@
 					
 					<div class="product_category"><a href="{{URL::base()}}/category/{{$catId}}"></a>{{$category}}</div>
 					
-					<div class="product_text text-danger"><i class="fas fa-truck fa-flip-horizontal	"></i> {{$cargo}}</div>
+					<div class="product_text">Kargo: <l class="text-danger">{{$kargo}}</l></div>
 					<div class="order_info d-flex flex-row">
 						<form action="#">
 							<div class="clearfix">
@@ -127,7 +127,7 @@
 
 							</div>
 
-							<div class="product_price">{{$price}} TL</div>
+							<div class="product_price">{{price($price)}} TL</div>
 							<div class="button_container">
 								
 

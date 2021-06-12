@@ -17,8 +17,7 @@
     ],
     "require": 
     {
-        "php": ">=7.0.0",
-        "iyzico/iyzipay-php": "^2.0"
+        "php": ">=7.0.0"
     },
     "scripts": 
     {

@@ -36,7 +36,7 @@ justify-content:center;
                     </div>
                 </figcaption>
                 <div class="bottom-wrap"> 
-                	<div class="price-wrap mb-2" > <span class="price h5">{{$key->price}} TL</span>  </div>
+                	<div class="price-wrap mb-2" > <span class="price h5">{{price($key->price)}} TL</span>  </div>
                 </div>
                     <div class="bottom-wrap-btn text-center " style="border-top: 1px solid #e4e4e4;padding: 10px; font-size: 1.3rem" >
                     	<a href="/product/detail/{{$key->id}}/{{$key->title_seo}}"> <i class="fas fa-check-circle"></i> İncele </a>
