@@ -24,6 +24,7 @@
         [
             'panel' => 'Panel',
             'store' => 'Store',
+            'devtools' => 'Devtools',
         ]
     ],
 
@@ -42,6 +43,6 @@
 
     'containers' =>
     [
-        'Backend' => 'Frontend'
+        
     ]
 ];

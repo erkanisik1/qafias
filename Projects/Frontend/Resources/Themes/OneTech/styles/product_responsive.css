@@ -21,6 +21,11 @@
 
 ******************************/
 
+@media only screen and (max-width: 1800px)
+{
+	.logo_container img{height: 175px;}
+}
+
 /************
 1. 1600px
 ************/
@@ -380,6 +385,7 @@
 
 @media only screen and (max-width: 575px)
 {
+	.logo_container img{height: 70px;}
 	h2{font-size: 24px;}
 	p{font-size: 13px;}
 	.top_bar
@@ -732,5 +738,6 @@
 
 @media only screen and (max-width: 400px)
 {
-	
+	.logo_container img{height: 40px;}
+
 }

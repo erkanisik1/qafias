@@ -20,7 +20,7 @@ use Import,Cart;
 				}';
 			fwrite($dosya, $yazdir);
 
-			(
+			
 		}
 		if(Method::post('cnt') == 'method'){echo Method::post('isim');}
 		if(Method::post('cnt') == 'view'){

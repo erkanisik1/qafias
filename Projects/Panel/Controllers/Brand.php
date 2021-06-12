@@ -9,9 +9,5 @@ use Import,DB,Method,Session;
 			view::brandList($brandList);
 		}
 
-		function new(){
-			if(Method::post()){
-				$this->brand->new(Method::post());
-			}
-		}
+		
 	}

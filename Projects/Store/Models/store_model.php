@@ -6,21 +6,16 @@
 			
 			$pass = md5($post['loginPassword']);
 
-			$check = DB::where('mail', $post['loginMail'],'and')
-			->where('password',$pass)
-			->get('store')
-			->row();
+			$check = DB::where('mail', $post['loginMail'],'and')->where('password',$pass)->get('store')->row();
 
-			output($check);
 		
 			if($check){
+
 				Session::insert('LOGIN', 'true');
 				Session::insert('STOREID', $check->id);
 				Session::insert('STORENAME', $check->shop_name);
 				redirect();
 			}
-
-			
 
 		}
 

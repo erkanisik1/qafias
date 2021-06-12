@@ -1,4 +1,5 @@
 $(function(){
+
    $('#secenek').click(function(){
       $('.secenekler').append('<div class="row"><div class="span6"><label>Seçeneğin Adı ( örnek: Beden )</label><br><input type="text" class="span11" name="new_label[]" value=""></div><div class="span6"><label>Seçeneklerin aralarına virgül koyarak yazın ( Örnek: S,M,L )</label><br><input type="text" class="span11" name="new_sec[]" value=""></div></div><hr>');
   });  
@@ -15,11 +16,9 @@ $(function(){
 
   $('.delete_img').click(function(){
      var delete_img = $(this).data("id");
-     $.post("../../ajax/img_delete",{id:delete_img},function(data){
-        $("#"+data).fadeOut();
-      
-       
-    });
+      $.post("../../ajax/img_delete",{id:delete_img},function(data){
+         $("#"+data).fadeOut();
+      });
     
   });
 
@@ -38,7 +37,14 @@ $(function(){
 	});
 
 
-  
+  $('#kargo').change(function(){
+     
+    if ($("#kargo").val() == 1) {
+      $('#kargoFiyati').show('300');
+      $('#kargoFiyati').focus();
+
+    }
+  })
  
 
 }); //jquery sonu

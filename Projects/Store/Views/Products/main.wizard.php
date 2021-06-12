@@ -1,11 +1,31 @@
-		<div class="widget-box">
+		<a href="/store/products/new "><button class="btn btn-primary">YENİ ÜRÜN EKLE</button> </a>
+<style>
+  .kategori{
+    margin:10px;
+  }
+</style>
+
+    <div class="widget-box">
 	        <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
 	          <h5>Ürün listesi</h5>
 
-	          <div class="pull-right" style="margin:5px;"><a href="/store/products/new "><button>YENİ ÜRÜN EKLE</button> </a></div>
+	          
 	        </div>
         	<div class="widget-content nopadding">
+            <div class="kategori">
+            <form action="" method="post">
+                  
+          <select name="kategori"  onchange='submit()'>
+            <option value="0">Kategori Seçiniz...</option>
+          @foreach ($storeKategori as $key )
+                <option value="{{$key->category}}">{{categoryName($key->category)}}</option>
+          @endforeach
+            
+          </select>
+      
 
+            </form>
+</div>
 
         	<table class="table table-bordered table-striped">
               <thead>
@@ -18,27 +38,27 @@
                   <th width="100">KATEGORİ</th>
                   <th width="10">ADET</th>
                   <th width="50">FİYAT</th>
-                  <th width="120">İŞLEMLER</th>
+                  <th width="150">İŞLEMLER</th>
                 </tr>
               </thead>
               <tbody>
 
 				{[ $a=0;]} 
-        @foreach (store_products() as $key ) 
+        @foreach (storeProducts($kategori) as $key ) 
         {[$a = $a + 1;]}
                 <tr>
-                	<td>{[ echo $a; ]} </td>
-                  <td>{[ echo $key->id; ]}</td>
-                  <td><img src="/{[ echo mainimage($key->id); ]}" alt="" width="100"></td>
-                  <td>{[ echo tcevir($key->create_date) ]}</td>
-                  <td>{[ echo $key->title ]}</td>
-                  <td>{[ echo category($key->category)->name; ]}</td>
-                  <td>{[ echo $key->stock_quantity; ]}</td>
-                  <td>{[ echo $key->price.' TL'; ]}</td>
+                	<td>{{$a}} </td>
+                  <td>{{$key->id}}</td>
+                  <td><img src="/{{mainimage($key->id)}}" alt="" width="100"></td>
+                  <td>{{tcevir($key->create_date)}}</td>
+                  <td>{{$key->title}}</td>
+                  <td>{{category($key->category)->name}}</td>
+                  <td>{{$key->stock_quantity}}</td>
+                  <td>{{$key->price.' TL'}}</td>
                 
                   <td  style="text-align: center;">
-                    <a href="/store/products/edit/{[ echo $key->id; ]}"><button class="btn btn-primary align-middle"> Düzenle </button></a>
-                    <a href="/store/products/delete/{[ echo $key->id; ]}" onclick="return confirm('Bu kaydı silmek istediğinize eminmisiniz?');"><button class="btn btn-danger"> Sil </button></a>
+                    <a href="/store/products/edit/{{$key->id}}"><button class="btn btn-primary align-middle"> Düzenle </button></a>
+                    <a href="/store/products/delete/{{$key->id}}" onclick="return confirm('Bu kaydı silmek istediğinize eminmisiniz?');"><button class="btn btn-danger"> Sil </button></a>
                   </td>
                 </tr>
               @endforeach           

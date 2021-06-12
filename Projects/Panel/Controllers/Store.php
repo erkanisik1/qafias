@@ -43,8 +43,8 @@ use Import,DB,Method,Session;
 		}
 
 		function onaybekleyen(){
-			$data['dukkan'] = $this->store_model->liste('0');
-			Import::view('store/store_list',$data);
+			//$dukkan = $this->store_model->liste('0');
+			//View::dukkan($dukkan);
 		}
 
 		function send($id){

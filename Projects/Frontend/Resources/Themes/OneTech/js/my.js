@@ -1,22 +1,77 @@
 $(function(){
+function addZero(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+function getActualDate() {
+    var d = new Date();
+    var day = addZero(d.getDate());
+    var month = addZero(d.getMonth()+1);
+    var year = d.getFullYear();
+    return year+ "-"+month+"-"+day;
+}
+
+function formatCurrency(total) {
+    var neg = false;
+    if(total < 0) {
+        neg = true;
+        total = Math.abs(total);
+    }
+    return (neg ? "-$" : "" ) + parseFloat(total, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString();
+}
+
+ if(localStorage.getItem('eucookie') != '123'){
+    jQuery("#privacy-pop-up").delay(1).fadeIn(1000);
     
+  } 
+  
+  jQuery('#exit-popup').click(function(e) { 
+    jQuery('#privacy-pop-up').fadeOut(1000);
+    localStorage.setItem('eucookie','123');
+  });
+  
+
    $('#basket').click(function(){
+
+
         var quantity = $('#quantity_input').val();
-        var basketdata = $('#basket').data('id');
-        var date = yil+ay+gun+saat+dakika+saniye;
+        var productId = $('#basket').data('id');
+        var date = getActualDate();
         $.ajax({
             type: "POST",
-            url: "ajax/basketadd",
-            data: "veri="+basketdata+'/'+quantity+'/'+date,
+            url: "/ajax/basketadd",
+            data: "veri="+quantity+'/'+productId+'/'+date,
             success: function(data){
-                alert(data);
+                var parcala = data.split('/');
+               
+
+               $('#count').text(parcala['0']);
+               $('.cart_price').text( formatCurrency(parcala['1'])+' TL');
                
             },
             error: function(xhr, status, error) {
-  alert(xhr.responseText);
-}
+              alert(xhr.responseText);
+            }
 
         });
+        
+    });
+
+
+    $(window).scroll(function(){
+    var scrolltop=$(this).scrollTop();
+    if(scrolltop>=50)
+    {
+        $(".imgup").show(500);
+    }
+    else { $(".imgup").hide(500);
+    }
+    });
+    $(".imgup").click(function()
+    {
+        $("html,body").animate({scrollTop: 0}, 500);
     });
 
 /*
@@ -50,3 +105,5 @@ $.validator.setDefaults({
 */
 
 });
+
+

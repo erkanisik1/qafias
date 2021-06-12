@@ -10,10 +10,9 @@
     [
         'driver'      => 'pdo',
         'host'        => 'localhost',
-        'database'    => 'shopcarttr_2021125',
-        'user'        => 'shopcarttr_2021125',
-        'password'    => 'B95IM1vtaS',
-        'dsn'         => '',
+        'database'    => 'qafias_HcHPWMV2',
+        'user'        => 'qafias_mCWfTNlW',
+        'password'    => 'B7t-VwN1',
         'server'      => '',
         'port'        => '',
         'cacheDriver' => 'file',

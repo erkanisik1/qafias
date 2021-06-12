@@ -13,9 +13,11 @@ use Import,Cart,URI;
 			$category 	= products_category(product_detail($id)->category)->name;
 			$title 		= product_detail($id)->title;
 			$content 	= product_detail($id)->content;
-			$cargo 		= product_detail($id)->cargo_payment == 0?'Ücretsiz Kargo':'Alıcı Kargoyu Kapıda Öder';
+			$cargo 		= product_detail($id)->cargo_payment == 2?'Ücretsiz Kargo':'Alıcı Kargoyu Kapıda Öder';
 			$price		= product_detail($id)->price;
 			$cat_id 	= product_detail($id)->category;
+
+		
 
 
 			view::category($category)

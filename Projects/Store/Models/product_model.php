@@ -70,6 +70,7 @@
 
 
 		function update($post){
+		
 			DB::where('id', $post['id'])->update('products',[
 				'title' 			=> $post['title'],
 				'title_seo' 		=> seo($post['title']),
@@ -115,18 +116,17 @@
 					#echo $update.'<br>';
 				}
 			}
-			/* /Yeni Seçenek eklendiğinde çalışan bölüm */
+			/* Yeni Seçenek eklendiğinde çalışan bölüm */
 
 			/*yeni resim yükleme alanı*/
 			
 
 			if(!$_FILES['images']['name']['0'] == ''){
-				$target = 'upload/products/'.Session::select('storeid');
+				$target = 'upload/products/'.Session::select('STOREID');
 
 				Upload::settings([
-			    'encode'     => 'md5',
 			    'extensions' => 'jpg|png|webp|gif',
-			    'maxsize'    => 256000,
+			    'maxsize'    => 1048576,
 				])
 				->target($target)
 				->start('images');
@@ -139,10 +139,9 @@
 						'link' 			=> $image
 						]);
 					}
+
 				}
-				
-			}
-				
+			}				
 
 			if (!DB::error()) {
 				redirect('products');

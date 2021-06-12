@@ -32,24 +32,10 @@
                     </div>
                 </div>
                 <div class="form-actions">
-                    <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">Şifremi Unuttum?</a></span>
-                    <span class="pull-right"><button type="submit" class="btn btn-success">Giriş</button ></span>
+                    <button type="submit" class="btn btn-primary btn-block">Giriş</button >
                 </div>
             </form>
-            <form id="recoverform" action="#" class="form-vertical">
-                <p class="normal_text">Yeni şifre almak için E-Posta adresinizi girin, E-posta adresinize yeni şifre linki gönderilecektir.</p>
-                
-                    <div class="controls">
-                        <div class="main_input_box">
-                            <span class="add-on bg_lo"><i class="icon-envelope"></i></span><input type="text" placeholder="E-Posta Adresiniz" />
-                        </div>
-                    </div>
-               
-                <div class="form-actions">
-                    <span class="pull-left"><a href="#" class="flip-link btn btn-success" id="to-login">&laquo; Giriş ekranına geri dön </a></span>
-                    <span class="pull-right"><a class="btn btn-info"/>Gönder</a></span>
-                </div>
-            </form>
+            
         </div>
         
         <script src="js/jquery.min.js"></script>  

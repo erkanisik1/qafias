@@ -38,3 +38,13 @@ fieldset{
 	padding-left: 10px;
 	font-size: 14px;
 }
+
+.logo{
+	color: #fff700;
+    display: block;
+    font-size: 50px;
+    font-weight: bolder;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-style: italic;
+}

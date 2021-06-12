@@ -4,7 +4,7 @@
 			<div class="col d-flex flex-row">
 				<div class="top_bar_contact_item">
 					<div class="top_bar_icon"><img src="images/phone.png" alt=""></div>{{settings('telephone')}}</div>
-					<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/mail.png" alt=""></div><a href="mailto:fastsales@gmail.com">{{settings('mail')}}</a></div>
+					<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/mail.png" alt=""></div><a href="mailto:{{settings('mail')}}">{{settings('mail')}}</a></div>
 					<div class="top_bar_content ml-auto">
 						@if(Session::select('LOGIN') == true)
 						<div class="top_bar_user">

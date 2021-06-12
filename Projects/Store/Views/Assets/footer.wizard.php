@@ -15,8 +15,6 @@
 <script src="js/matrix.js"></script> 
 <script src="js/matrix.dashboard.js"></script> 
 <script src="js/matrix.login.js"></script> 
-<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=d6svnnvb45e83intvoi2vqxggihegsrd73eah9unxtrcz5r3"></script>
-@view('editor')
 
 
 <!--  

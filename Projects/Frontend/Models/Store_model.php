@@ -3,7 +3,7 @@
 class Store_model extends Model{
 	
 	function kayit($post){
-		DB::insert('store',
+		DB::insert('store',[
 			'name' 					=> $post['name'],
 			'name_seo' 				=> seo($post['name']),
 			'address' 				=> $post['address'],

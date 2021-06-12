@@ -17,11 +17,8 @@ class Ajax extends Controller{
 	function img_delete(){
 		$id =  Method::post('id');
 		$db = DB::where('id',$id)->get('products_img')->row();
-
-		
 		unlink(Folder::basePATH().'/'.$db->link);
 		DB::where('id',$id)->delete('products_img');
-		//echo  Folder::basePATH().'/'.$db->link;
-		echo Method::post('id');
+		echo $id;
 	}
 }

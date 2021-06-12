@@ -1,4 +1,5 @@
 {{	DB::error()}}
+@view('Assets/editor')
  <form action="" method="post" class="form-horizontal" id="firmakjayit" enctype="multipart/form-data">
 <div class="widget-box">
 	<fieldset>
@@ -62,6 +63,7 @@
 		    <label class="control-label">Ürün Açıklaması :</label>
 		   <div class="controls">
 		   		<textarea class="textarea_editor span11" id="editor" rows="20" name="content"></textarea>
+		   	@view('Assets/editor')
 		   	</div>
 		</div>
 
@@ -93,7 +95,7 @@
 		<div class="control-group">
 		    <label class="control-label">Stok Adeti :</label>
 		    <div class="controls">
-		       	<input type="text" class="span11" name="stock_quantity" placeholder="Stok adetini yazın...">
+		       	<input type="text" class="span11" name="stock_quantity" value="1" >
 			</div>
 		</div>
 
@@ -117,13 +119,14 @@
         </div>
 
 		<div class="control-group">
-			<label class="control-label">Kargo Durumu :</label>
+			<label class="control-label">Kargo Ödemesi :</label>
 			<div class="controls">
-			    <select name="cargo_payment" class="span11">
+			    <select name="cargo_payment" class="span11" id="kargo">
 			    	<option value="0" selected>Seçiniz....</option>
 			    	<option value="1">Alıcı Öder</option>
 			    	<option value="2">Satıcı Öder ( Ücretsiz kargo )</option>			    	
 			    </select>
+			    <input type="text" id="kargoFiyati" name="kargoFiyati" value="" placeholder="Kargo Fiyatını yazın" style="display: none;margin-top: 5px;">
 			</div>
 		</div>
 		

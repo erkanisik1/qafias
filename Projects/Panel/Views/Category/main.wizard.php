@@ -14,12 +14,14 @@
               <thead>
                 <tr>
                   <th>Kategoriler</th>
+                  <th width="20">Durum</th>
                   <th width="80">İşlemler</th>
                 </tr>
               </thead>
               <tbody>
+        
                
-                  {{KategoriTablosu()}}
+                 {{KategoriTablosu()}}
                
               
 

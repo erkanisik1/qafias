@@ -1,7 +1,7 @@
-
+@view('Assets/editor')
 
 <form action="" method="post" class="form-vertical" enctype="multipart/form-data">
-<button class="btn btn-primary" type="submit"><i class="icon-save"></i></button>
+<button class="btn btn-primary" type="submit"><i class="icon-save"></i> KAYDET</button>
 <div class="widget-box">
 	<div class="widget-title">
 		<ul class="nav nav-tabs">
@@ -39,7 +39,7 @@
 					<div class="controls">
 						<select name="brand" class="span12">
 							<option value="0">Seçiniz...</option>
-							@foreach (store_brands(session::select('storeid')) as $key )
+							@foreach (store_brands(session::select('STOREID')) as $key )
 								<option value="{[ echo $key->id; ]}" {[ selected($key->id,product_detail($id)->brand) ]} >{[ echo $key->brand; ]}</option>
 							@endforeach
 
@@ -165,7 +165,7 @@
 				<label class="control-label">Resim Yükle</label>
 				<div class="controls">
 					<div class="preview"></div>
-					<input type="file" name="images[]" class="urunresim" id="urunresim" multiple="" onchange="verioku()">
+					<input type="file" name="images[]" class="urunresim" id="urunresim" onchange="verioku()">
 				</div>
 			</div>
 

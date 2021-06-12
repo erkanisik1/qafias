@@ -1,5 +1,6 @@
 <?php namespace Project\Controllers;
 use DB,Method,Email,Session,Cart; 
+
 	class Ajax extends Controller{
 		
 		function ilcegetir(){
@@ -26,18 +27,21 @@ use DB,Method,Email,Session,Cart;
 		}
 
 		function basketadd(){
-			/*
+			
 			$data = explode('/', method::post('veri'));
-			$rnd = Session::select('userid').$data['2'];
+			$rnd = time();
+			
 			cart::insertItem([
-				'product'       => product_detail($data['0'])->title,
-				'price'         => product_detail($data['0'])->price,
-				'quantity'      => $data['1'],
+				'productid' 	=> $data['1'],
+				'title'     	=> product_detail($data['1'])->title,
+				'price'         => product_detail($data['1'])->price,
+				'quantity'      => $data['0'],
 				'serial-number' => $rnd,
 				'userid'		=> Session::select('userid'),
 			]);
-			*/
-			echo 'başarılı';
+			
+			echo Cart::totalItems().'/'.Cart::totalPrices();
+			
 		}
 
 
@@ -56,8 +60,8 @@ use DB,Method,Email,Session,Cart;
 			]);
 		
 			if(DB::affectedRows()){ 
-				$link = '<a href="http://prestigemagaza.com/user/aktivizasyon/'.$rast.'" target="_blank">Hesabınızın aktifleşmesi için lütfen tıklayın...</a>';
-				Email::from('musterihizmetleri@prestigemagaza.com','Prestige Mağaza Müşteri Hizmetleri')->to(method::post('email'))->send('Üyelik Aktivizasyonu', $link);
+				$link = '<a href="http://qafias.com/user/aktivizasyon/'.$rast.'" target="_blank">Hesabınızın aktifleşmesi için lütfen tıklayın...</a>';
+				Email::from('musterihizmetleri@qafias.com','QAFIAS Müşteri Hizmetleri')->to(method::post('email'))->send('Üyelik Aktivizasyonu', $link);
 				echo '1';
 			}
 		}

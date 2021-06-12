@@ -1274,7 +1274,7 @@ select option
 }
 .input_field
 {
-	width: calc((100% - 60px) / 3);
+	width: calc((100% - 30px) / 2);
 	height: 50px;
 	padding-left: 25px;
 	border: solid 1px #e5e5e5;

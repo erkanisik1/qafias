@@ -10,7 +10,7 @@
 	<div class="container">
 		<div class="row">
 			<!-- Shop Sidebar -->
-			@view('Category/sidebar')
+			@view('Assets/sidebar')
 			<!-- Shop Content -->
 			@view('Category/shopContent')
 		</div>

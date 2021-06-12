@@ -53,7 +53,7 @@
 						</div>
 						@else
 							<div class="card_title"><h2>Sepetiniz Boş</h2><br>
-Alışverişinize sizin için önerdiğimiz ürünlere göz atarak başlayabilirsiniz.
+Alışverişinize sizin için önerdiğimiz ürünlere göz atarak başlayabilirsiniz.5555
 
 </div>
 						@endif

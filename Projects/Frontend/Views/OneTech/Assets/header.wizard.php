@@ -1,6 +1,17 @@
+ <style>.imgup{
+  position:fixed;
+  bottom:30px;
+  right:20px;
+  cursor:pointer;
+  display:none;
+  width: 65px;
+  z-index: 100;
+  
+}
+</style>
 
 <div class="super_container">
-	<header class="header">
+	<header class="header" style="background: #F7F7F7;">
 
 		<!-- Top Bar -->
 		@view('Assets/Topbar')
@@ -13,7 +24,12 @@
 					<!-- Logo -->
 					<div class="col-lg-2 col-sm-3 col-3 order-1">
 						<div class="logo_container">
-							<div class="logo"><a href="{{URL::base()}}">{{settings('site_name')}}</a></div>
+							<div class="logo">
+								
+								<a href="{{URL::base()}}" >
+									<img src="{{URL::base('upload/magazalogo/qafias_logo.jpeg')}}" alt="">
+								</a>
+							</div>
 						</div>
 					</div>
 

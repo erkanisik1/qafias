@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use Import,DB,Method,Session;
+use Import,DB,Method,Session, URI;
 
 class Category extends Controller{	
    
@@ -15,16 +15,17 @@ class Category extends Controller{
 		Import::view('category/new');
 	}
 
-	function edit($id){
-		output(method::post());
+	function edit(){
+		$id = Uri::get('edit');
+		
 		if (Method::post()) {$this->category_model->update(Method::post());}
-		$data['edit'] = $this->category_model->edit($id);
-		Import::view('category/edit',$data);
+		$edit = $this->category_model->edit($id);
+		view::edit($edit);
 	}
 
 	function delete($id){
 		DB::where('id',$id)->delete('products_category');
-		if (DB::affectedRows()) {redirect('yonetim/category');}
+		if (DB::affectedRows()) {redirect('category');}
 	}
 
 

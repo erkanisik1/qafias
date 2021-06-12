@@ -1,6 +1,9 @@
 <!--Header-part-->
 <div id="header">
-  <h1><a href="/">{[ echo settings('site_name') ]}</a></h1>
+	<div class="logo">
+		
+  {{settings('site_name')}}
+	</div>
 </div>
 <!--close-Header-part--> 
 @view('Assets/navbar')

@@ -13,10 +13,10 @@
 			<div class="cart_container d-flex flex-row align-items-center justify-content-end">
 				<div class="cart_icon">
 					<img src="images/cart.png" alt="">
-					<div class="cart_count"><span>{{Cart::totalItems()}}</span></div>
+					<div class="cart_count"><span id="count">{{Cart::totalItems()}}</span></div>
 				</div>
 				<div class="cart_content">
-					<div class="cart_text"><a href="/user/basket">Sepetim</a></div>
+					<div class="cart_text"><a href="/sepet">Sepetim</a></div>
 					<div class="cart_price">{{price(Cart::totalPrices())}} TL</div>
 				</div>
 			</div>
