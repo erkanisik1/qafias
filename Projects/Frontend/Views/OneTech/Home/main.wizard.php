@@ -2,23 +2,25 @@
 @view('Home/slider')
 <style>
 	.image{
-		
 		display:flex;
-align-items:center;
-justify-content:center;
-		
+		align-items:center;
+		justify-content:center;
 		height: 386px !important;
 	}
 	.img-thumbnail{
-		
 		margin: auto !important;
 		border:none;
 		object-fit: cover;
-		
 	}
+	.new_arrivals_title{
+		border-bottom: 1px solid #ccc;
+		color: #0e8ce4;
+	}
+
 </style>
 
 <div class="container">
+    	<div class="new_arrivals_title">Yeni Gelenler</div>
     <div class="row">
 		@foreach (main_products('100') as $key)
         	<div class="col-md-3 hw" >

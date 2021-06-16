@@ -161,3 +161,14 @@
 .eucookie-pop-up .dismiss a { color:#fff; cursor:pointer; font-weight:bold; font-size:150%; padding:1em; } 
 .eucookie-pop-up .content { f4loat:left; width:92%;  text-align:center;  } 
 .eucookie-pop-up .content a { text-decoration: underline;color:#fff } 
+
+.imgup{
+  position:fixed;
+  bottom:30px;
+  right:20px;
+  cursor:pointer;
+  display:none;
+  width: 65px;
+  z-index: 100;
+  
+}

@@ -1273,7 +1273,7 @@ select option
 .banner_product_image
 {
 	position: absolute;
-	top: -5px;
+	top: -50px;
 	right: -52px;
 	z-index: 0;
 }
@@ -2218,12 +2218,12 @@ select option
 }
 .new_arrivals_title
 {
-	position: absolute;
+	1position: absolute;
 	left: 0;
 	top: -7px;
 	font-size: 24px;
 	font-weight: 500;
-	margin-bottom: -29px;
+	m1argin-bottom: -29px;
 }
 .arrivals_slider
 {

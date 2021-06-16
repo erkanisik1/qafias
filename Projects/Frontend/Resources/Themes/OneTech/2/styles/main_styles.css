@@ -2211,12 +2211,12 @@ select option
 }
 .new_arrivals_title
 {
-	position: absolute;
+	/* position: absolute; */
 	left: 0;
 	top: -7px;
 	font-size: 24px;
 	font-weight: 500;
-	margin-bottom: -29px;
+	/* margin-bottom: -29px; */
 }
 .arrivals_slider
 {

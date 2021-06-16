@@ -244,3 +244,8 @@ function  KategoriTablosu($id = 0,$secim = 0,$tire = 0){
 function userName($id){
   return DB::where('id', $id)->select('name')->get('user')->value();
 }
+
+/* Slider Fonksiyonları */
+function sliderResult(){
+  return DB::sliderResult();
+}

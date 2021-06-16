@@ -36,3 +36,4 @@ $classMap['namespaces']['project\controllers\create'] = 'create';
 $classMap['namespaces']['project\controllers\login'] = 'login';
 $classMap['namespaces']['project\controllers\setting'] = 'setting';
 $classMap['namespaces']['project\controllers\user'] = 'user';
+$classMap['classes']['slider_model'] = 'Projects/Panel/Models/slider_model.php';

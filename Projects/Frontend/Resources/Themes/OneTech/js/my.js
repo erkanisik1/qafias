@@ -5,6 +5,9 @@ function addZero(i) {
     }
     return i;
 }
+
+ $( ".carousel-item:first-child" ).addClass( "active" );
+
 function getActualDate() {
     var d = new Date();
     var day = addZero(d.getDate());

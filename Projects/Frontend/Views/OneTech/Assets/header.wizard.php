@@ -1,15 +1,3 @@
- <style>.imgup{
-  position:fixed;
-  bottom:30px;
-  right:20px;
-  cursor:pointer;
-  display:none;
-  width: 65px;
-  z-index: 100;
-  
-}
-</style>
-
 <div class="super_container">
 	<header class="header" style="background: #F7F7F7;">
 
