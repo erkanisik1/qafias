@@ -22,14 +22,9 @@
         <li><a class="sTrash" title="" href="#"><i class="icon-trash"></i> trash</a></li>
       </ul>
     </li>
-    <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Ayarlar</span></a></li>
-    <li class=""><a title="" href="/panel/login/cikis"><i class="icon icon-share-alt"></i> <span class="text">Çıkış</span></a></li>
+    <li><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Ayarlar</span></a></li>
+    <li><a title="" href="/panel/login/cikis"><i class="icon icon-share-alt"></i> <span class="text">Çıkış</span></a></li>
+    <li><a title="" href="{{URL::base()}}" target="_blank"><i class="icon icon-home"></i> <span class="text">Site</span></a></li>
   </ul>
 </div>
 <!--close-top-Header-menu-->
-<!--start-top-serch-->
-<div id="search">
-  <input type="text" placeholder="Search here..."/>
-  <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
-</div>
-<!--close-top-serch-->

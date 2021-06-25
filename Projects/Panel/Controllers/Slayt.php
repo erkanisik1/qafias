@@ -25,8 +25,11 @@ class Slayt extends Controller{
     }
 
 
-    function slaytDelete(){
-        $id = Uri::get('slaytDelete');
+    function delete(){
+        $id = Uri::get('delete');
+        DB::where('id',$id)->delete('slider');
+        redirect('/panel/slayt');
+
     }
 
 

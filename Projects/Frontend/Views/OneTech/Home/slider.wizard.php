@@ -30,9 +30,11 @@
     
 @foreach(sliderResult() as $key)
 
-
+  
     <div class="carousel-item">
+<a href="{{$key->link}}">
       <img class="d-block w-100 " src="/{{$key->imgUrl}}" alt="First slide">
+</a>
     </div>
     @endforeach
 

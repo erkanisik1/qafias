@@ -23,6 +23,10 @@
 		
 	}
 
+  function unique(){
+    return mb_substr(str_shuffle(strtoupper(md5(uniqid(mt_rand(), true)))), 0, 18);
+  }
+
   function productNew($date){
     return Date::diffDayUp($date, Date::now());
   }
