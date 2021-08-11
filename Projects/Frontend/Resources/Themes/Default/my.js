@@ -1,4 +1,5 @@
 $(function(){
+ 
 function addZero(i) {
     if (i < 10) {
         i = "0" + i;
@@ -36,45 +37,48 @@ function formatCurrency(total) {
   });
   
 
-   $('#basket').click(function(){
-
+   $('#basket12').click(function(){
 
         var quantity = $('#quantity_input').val();
         var productId = $('#basket').data('id');
+        var random = Math.random().toString(36).substr(2, 15);
         var date = getActualDate();
+
+        if (localStorage.getItem("basketSecret") == null) {
+            localStorage.setItem("basketSecret", random);
+        }
+  //"veri="+quantity+'/'+productId+'/'+date
         $.ajax({
             type: "POST",
-            url: "/ajax/basketadd",
-            data: "veri="+quantity+'/'+productId+'/'+date,
-            success: function(data){
+            url: "/Product/basketadd",
+            data: $('#productForm').serialize()+'&basketSecret='+localStorage.getItem("basketSecret")+'&adet='+quantity+'&urunId='+productId,
+            success: function(data){ 
                 var parcala = data.split('/');
                
 
                $('#count').text(parcala['0']);
                $('.cart_price').text( formatCurrency(parcala['1'])+' TL');
-               
+               alert(data);
             },
             error: function(xhr, status, error) {
               alert(xhr.responseText);
             }
-
         });
-        
     });
 
 
     $(window).scroll(function(){
-    var scrolltop=$(this).scrollTop();
-    if(scrolltop>=50)
-    {
-        $(".imgup").show(500);
-    }
-    else { $(".imgup").hide(500);
-    }
-    });
-    $(".imgup").click(function()
-    {
-        $("html,body").animate({scrollTop: 0}, 500);
+        var scrolltop=$(this).scrollTop();
+        if(scrolltop>=50)
+        {
+            $(".imgup").show(500);
+        }
+        else { $(".imgup").hide(500);
+        }
+        });
+        $(".imgup").click(function()
+        {
+            $("html,body").animate({scrollTop: 0}, 500);
     });
 
 /*
@@ -107,6 +111,7 @@ $.validator.setDefaults({
 });
 */
 
+
+    
+
 });
-
-

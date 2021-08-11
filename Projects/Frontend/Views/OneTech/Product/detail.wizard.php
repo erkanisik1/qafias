@@ -1,47 +1,4 @@
-	<div class="container bg-white mt-2 radius">
-		
-		<div class="row">
-			<div class="col-lg-5 d-flex justify-content-center">
-				<div class="container d-flex justify-content-center">
-					<section id="default" class="padding-top:0">
-						<div class="row bg-white">							
-							<div class="xzoom-container">
-								<img class="xzoom xzoom-mainimage" id="xzoom-default" src="/{{mainimage($id)}}" xoriginal="/{{mainimage($id)}}"  />
-								<div class="xzoom-thumbs">
-									@foreach (product_images($id) as $key )
-									<a href="/{{$key->link}}"><img class="xzoom-gallery" width="80" src="/{{$key->link}}" ></a> 
-									@endforeach
-								</div>
-							</div>
-						</div>
-					</section>
-				</div>				
-			</div>
-
-			<!-- Description -->
-			<div class="col-lg-7 order-1">
-				<div class="product_description">
-
-					<div class="product_name">{{$title}}</div>
-					
-					<div class="product_category"><a href="{{URL::base()}}/category/{{$catId}}"></a>{{$category}}</div>
-					
-					<div class="product_text">Kargo: <l class="text-danger">{{$kargo}}</l></div>
-					<div class="order_info d-flex flex-row">
-						<form action="#">
-							<div class="clearfix">
-
-								<!-- Product Quantity -->
-								<div class="product_quantity clearfix" >
-									<span>Adet: </span>
-									<input id="quantity_input" type="text" name="quantity" pattern="[0-9]*" value="1">
-									<div class="quantity_buttons">
-										<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
-										<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
-									</div>
-								</div>
-								<br><br><br>
-								<style>
+	<style>
 									.selec{
 										width: 182px;
 
@@ -103,12 +60,57 @@
 									}
 								</style>
 
+	<div class="container bg-white mt-2 radius">
+		
+		<div class="row">
+			<div class="col-lg-5 d-flex justify-content-center">
+				<div class="container d-flex justify-content-center">
+					<section id="default" class="padding-top:0">
+						<div class="row bg-white">							
+							<div class="xzoom-container">
+								<img class="xzoom xzoom-mainimage" id="xzoom-default" src="/{{mainimage($id)}}" xoriginal="/{{mainimage($id)}}"  />
+								<div class="xzoom-thumbs">
+									@foreach (product_images($id) as $key )
+									<a href="/{{$key->link}}"><img class="xzoom-gallery" width="80" src="/{{$key->link}}" ></a> 
+									@endforeach
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>				
+			</div>
+
+			<!-- Description -->
+			<div class="col-lg-7 order-1">
+				<div class="product_description">
+
+					<div class="product_name">{{$title}}</div>
+					
+					<div class="product_category"><a href="{{URL::base()}}/category/{{$catId}}"></a>{{$category}}</div>
+					
+					<div class="product_text">Kargo: <l class="text-danger">{{$kargo}}</l></div>
+					<div class="order_info d-flex flex-row">
+						<form action="#" method="post" id="productForm">
+							<div class="clearfix">
+
+								<!-- Product Quantity -->
+								<div class="product_quantity clearfix" >
+									<span>Adet: </span>
+									<input id="quantity_input" type="text" name="adet" pattern="[0-9]*" value="1">
+									<div class="quantity_buttons">
+										<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
+										<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
+									</div>
+								</div>
+								<br><br><br>
+								
+
 								<div class="row">
 
 									@foreach (secenekler($id) as $key )
 
 									{[ $secenek = explode(',',$key->secenek)]}
-									<div class="selec ">
+									<div class="selec">
 										<span >{{$key->label}} : </span>
 										<select name="{{$key->label}}" id="" class="select ">
 											
@@ -131,10 +133,11 @@
 							<div class="button_container">
 								
 
-								{[Cookie::insert('url', '/product/detail/'.$id.'/'.product_detail($id)->title_seo);]}
+								{[Cookie::insert('productUrl', '/product/detail/'.$id.'/'.product_detail($id)->title_seo);]}
 								
 								
-								<button type="button"  class="cart_button btn btn-primary basket" id="basket" data-id="{{$id}}" >Sepete Ekle</button>
+								<button type="submit"  class="cart_button btn btn-primary basket" id="basket" data-id="{{$id}}" >Sepete Ekle</button>
+
 
 								<div class="product_fav"><i class="fas fa-heart"></i></div>
 							</div>

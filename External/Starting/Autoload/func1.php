@@ -23,9 +23,6 @@
 		
 	}
 
-  function unique(){
-    return mb_substr(str_shuffle(strtoupper(md5(uniqid(mt_rand(), true)))), 0, 18);
-  }
 
   function productNew($date){
     return Date::diffDayUp($date, Date::now());
@@ -97,6 +94,7 @@ function category($id){
     
   }
 
+  
   function category_result($id = 0){
     return DB::where('parentid',$id,'and')->where('status','1')->get('products_category')->result();
   }
@@ -253,3 +251,7 @@ function userName($id){
 function sliderResult(){
   return DB::sliderResult();
 }
+
+function unique(){
+    return mb_substr(str_shuffle(strtoupper(md5(uniqid(mt_rand(), true)))), 0, 18);
+  }

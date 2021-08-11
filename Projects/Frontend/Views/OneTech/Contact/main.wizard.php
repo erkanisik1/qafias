@@ -4,11 +4,8 @@
  <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 <style>
 	p{
-		font-size: 1.5em
+		font-size: 1em
 	}
-</style>
-<br>	
-<style>
 	.contact_form{
 		padding-top: 10px !important;
 	}
@@ -18,7 +15,7 @@
     margin-bottom: 5px !important;
 }
 </style>
-		
+<br>	
 				<div class="container map_container">
 					<div class="row">
 						<div class="col-md-6">

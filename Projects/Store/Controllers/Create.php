@@ -1,15 +1,15 @@
 <?php namespace Project\Controllers;
-use Import,DB;  
+use Import,DB,Folder,File,Method;  
 
 class Create extends Controller{
 	
 	function main(){
 
-		if (method::post('controller') == '1') {
+	if (method::post('controller') == '1') {
 			
 			$file_name = Ucwords(method::post('name'));
 			
-			$controller_file = REAL_BASE_DIR.'Applications/Magazayonetim/Controllers/'.$file_name.'.php';
+			$controller_file = REAL_BASE_DIR.'Projects/Store/Controllers/'.$file_name.'.php';
 			file::create($controller_file);
 			
 			//$controller = fopen($controller_file,"a");
@@ -18,21 +18,24 @@ class Create extends Controller{
 use Import,DB;  
 class $file_name extends Controller{
 	function main(){
-		Import::view('".$file_name."/index_view');
+		
 	}
 
 	function new(){
-		if(method::post()){\$this->".$file_name."_model->insert(method::post());}
-		Import::view('".$file_name."/new_view');
+		if(method::post()){\$this->".$file_name."_model->new(method::post());}
+		
 	}
 
 	function edit(){
+		\$id = Uri::get('edit');
 		if(method::post()){\$this->".$file_name."_model->update(method::post());}
-		Import::view('".$file_name."/edit_view');
+		View::id($id);
+		
 	}
 
-	function delete(\$id){
-		\$this->".$file_name."_model->delete(method::post());		
+	function delete(){
+		\$id = Uri::get('delete');
+		\$this->".$file_name."_model->delete(\$id);		
 	}
 
 
@@ -55,49 +58,30 @@ file::write($controller_file, $yazdir);
 		}// controller sonu
 
 		if (method::post('model') == '1') {
+
 			$file_name = Ucwords(method::post('name'));
 			$table = method::post('table');
-			$model_file = REAL_BASE_DIR.'Applications/Magazayonetim/Models/'.method::post('name').'_model.php';
+			$model_file = REAL_BASE_DIR.'Projects/Store/Models/'.$file_name.'_model.php';
 			file::create($model_file);
 			
-			$yazdir = "<?php namespace Project\Controllers;
-use Import,DB;  
-class ".$file_name."_model extends Model{
-	function list(){
-		return DB::get('$table')->result();
-	}
+			$yazdir = "<?php 
+			use Import,DB;  
+			class ".$file_name."_model extends Model{
+				
+				function list(){
+					return DB::get('$table')->result();
+				}
 
-	function insert(\$post){
+			
 
-		DB::insert('$table',[";
-		foreach (DB::listColumns($table) as $key) {
-			$yazdir .=	"'$key->Field' =>  \$post['$key->Field'],\n";
-		}
+				function delete(\$id){
+					DB::where('id',\$id)->delete('".method::post('table')."');
+					redirect($file_name);
+				}
 
+			}";
 
-	$yazdir .= "]);
-		
-	}
-
-	function update(\$id){
-		DB::where('id',\$id)->update('$table',[ ";
-
-foreach (DB::listColumns($table) as $key) {
-			$yazdir .=	"'$key->Field' =>  \$post['$key->Field'],\n";
-		}
-
-
-	$yazdir .= "]);
-	}
-
-function delete(\$id){
-	DB::where('id',\$id)->delete('".method::post('table')."');
-		redirect($file_name);
-}
-
-}";
-
-			file::write($model, $yazdir);
+			file::write($model_file, $yazdir);
 
 			
 
@@ -105,33 +89,17 @@ function delete(\$id){
 			
 		}//Model sonu
 
-		if (method::post('view') == '1') {
+	if (method::post('view') == '1') {
 			$file_name = Ucwords(method::post('name'));
-			$folder = REAL_BASE_DIR.'Applications/Magazayonetim/Views/'.$file_name;
+			$folder = REAL_BASE_DIR.'Projects/Store/Views/'.$file_name;
 
 			Folder::create($folder,0755);
-			file::create($folder.'/index_view.php');
-			file::create($folder.'/update_view.php');
-			file::create($folder.'/insert_view.php');
-
-			$write = "<?php namespace Project\Controllers;
-use Import,DB;  Import::view('header') ?>
-
-<?php namespace Project\Controllers;
-use Import,DB;  Import::view('footer') ?>";
-
-			file::write($folder.'/index_view.php', $write);
-			file::write($folder.'/update_view.php', $write);
-			file::write($folder.'/insert_view.php', $write);
-
-
+			File::create($folder.'/main.wizard.php');
+			File::create($folder.'/update.wizard.php');
+			File::create($folder.'/new.wizard.php');
 
 		}//view sonu
-
-
-		Import::view('Create_view');
+		
 
 	}
 }
-?>
-

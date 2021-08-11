@@ -6,7 +6,7 @@
 	<meta name="yandex-verification" content="9a59a9734c566962" />
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styles/jquery-ui-1.10.3.custom/jquery-ui-1.10.3.custom.css" />
-
+	<link rel="stylesheet" type="text/css" href="styles/my.css">
 
 @if (CURRENT_CONTROLLER == 'Home')
 	<link rel="stylesheet" type="text/css" href="styles/home.css">
@@ -36,7 +36,7 @@
 @elseif (CURRENT_CONTROLLER == 'Page')
 	<link rel="stylesheet" type="text/css" href="styles/shop_styles.css">
 	<link rel="stylesheet" type="text/css" href="styles/shop_responsive.css">
-	<link rel="stylesheet" type="text/css" href="plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="plsugins/jquery-ui-1.12.1.custom/jquery-ui.css">
 @elseif (CURRENT_CONTROLLER == 'Basket')
 	<link rel="stylesheet" type="text/css" href="styles/shop_styles.css">
 	<link rel="stylesheet" type="text/css" href="styles/shop_responsive.css">

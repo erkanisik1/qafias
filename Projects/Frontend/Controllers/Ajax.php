@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use DB,Method,Email,Session,Cart, Cookie; 
+use DB,Method,Email,Session,Cart; 
 
 	class Ajax extends Controller{
 		
@@ -26,34 +26,7 @@ use DB,Method,Email,Session,Cart, Cookie;
 			}
 		}
 
-		function basketadd(){
-			
-			$data = explode('/', method::post('veri'));
-			$rnd = time();
-			if (!Cookie::select('uniqueId')) {
-				Cookie::insert('uniqueId', unique());	
-			}
-			
-
-			/*
-			DB::insert('basket'[
-
-			]);
-			*/
-			/*
-			cart::insertItem([
-				'productid' 	=> $data['1'],
-				'title'     	=> product_detail($data['1'])->title,
-				'price'         => product_detail($data['1'])->price,
-				'quantity'      => $data['0'],
-				'serial-number' => $rnd,
-				'userid'		=> Session::select('userid'),
-			]);
-			*/
-			//echo Cart::totalItems().'/'.Cart::totalPrices();
-			
-		}
-
+		
 
 		function user_register(){
 			$isim = method::post('name').' '.method::post('surname');

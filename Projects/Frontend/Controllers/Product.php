@@ -1,5 +1,5 @@
 <?php namespace Project\Controllers;
-use Import,Cart,URI; 
+use Import,Cart,URI,Method,Arrays; 
 
 	class Product extends Controller{
 		
@@ -23,6 +23,18 @@ use Import,Cart,URI;
 				$kargo = 'Alıcı Öder';
 			}
 
+			if (method::post()) {
+				
+				$data = array();
+			
+			foreach (Method::post() as $key => $value) {
+			$data[]= $key .'=>'. $value;	
+			}
+			
+			
+			output($data);
+			}
+
 			view::category($category)
 				->id(URI::get('detail'))
 				->title($title)
@@ -39,4 +51,42 @@ use Import,Cart,URI;
 			$cat_id = subcat($id).$id;
 			view::cat_id($cat_id); 
 		}
+
+		function basketadd(){
+			$basketSecret = method::post('basketSecret');
+			$urunId = method::post('urunID');
+			$adet = method::post('adet');
+			
+		
+			//$data = explode('/', method::post('veri'));
+			//$rnd = unique();
+		
+/*
+			$json = '{';
+			foreach (method::post() as $key => $value) {
+
+				
+				$json .= '"'.$key.'":"'.$value.'",';
+				
+			}
+$json .= '}';
+			echo $json;
+*/
+			//echo method::post('basketSecret');
+			//output(method::post());
+			/*
+			cart::insertItem([
+				'product'       => product_detail($data['1'])->title,
+				'price'         => product_detail($data['1'])->price,
+				'quantity'      => $data['0'],
+				'serial-number' => $rnd,
+				'userid'		=> Session::select('userid'),
+				'json'			=> $json,
+			]);
+			
+			echo Cart::totalItems().'/'.Cart::totalPrices();
+			*/
+		
+		}
+
 	}

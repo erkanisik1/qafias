@@ -1,5 +1,5 @@
 
-<?php import::view('header'); ?>
+{{output(DB::products_category()->columns())}}
 
 	<div class="container-fluid">
 		<div class="row-fluid">
@@ -26,9 +26,9 @@
             		
             		<select name="table" id="" class="span11">
             			<option value="">Seçin</option>
-            			<?php foreach (DBTool::listTables() as $key ): ?>
-            				<option value="<?php echo trim($key); ?>"><?php echo trim($key); ?></option>
-            			<?php endforeach ?>
+            		@foreach (DBTool::listTables() as $key )
+            				<option value="{[ echo trim($key); ]}">{[ echo trim($key); ]}</option>
+            			@endforeach
 
             		</select>
             	</div>
@@ -60,6 +60,4 @@
 
 </form>
 			
-			
-
- <?php import::view('footer'); ?>		
+	

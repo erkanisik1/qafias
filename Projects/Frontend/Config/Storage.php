@@ -54,7 +54,7 @@
     
     'shopping' =>
     [
-        'driver' => 'cookie'
+        'driver' => 'session'
     ],
 
     /*

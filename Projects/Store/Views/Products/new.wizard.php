@@ -9,7 +9,10 @@
           	<div class="controls">
            		<select name="category" class="span11">
 			    	<option value="">Kategori seçin...</option>
-			    	{[  KategoriListesi(); ]}
+			    	@foreach (category_result() as $key)
+			    		<option value="{{$key->id}}">{{$key->name}}</option>	
+			    	@endforeach
+			    
 				</select>
           	</div>
         </div>

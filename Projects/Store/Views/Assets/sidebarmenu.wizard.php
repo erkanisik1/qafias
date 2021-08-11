@@ -8,9 +8,13 @@
         <li><a href="/store/products/new">YENI ÜRÜN EKLE</a></li>
       </ul>
     </li>
+    <li><a href="/store/category"><i class="icon icon-signal"></i> <span>KATEGORİ YÖNETİMİ</span></a></li>
+
     <li><a href="/store/store"><i class="icon icon-signal"></i> <span>MAĞAZA BİLGILERİ</span></a></li>
     <li><a href="/store/orders"><i class="icon icon-user"></i> <span>SİPARİŞ LİSTESİ</span></a></li>
     <li><a href="/store/brands"><i class="icon icon-user"></i> <span>MARKALAR</span></a></li>
+
+     <li><a href="/store/create"><i class="icon icon-signal"></i> <span>Create</span></a></li>
 
   </ul>
 </div>
